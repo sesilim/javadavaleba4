@@ -20,16 +20,30 @@ var month = ["იანვარი", "თებერვალი", "მარ�
 var day= ["კვირა", "ორშაბათი", "სამშაბათი", "ოთხშაბათი", "ხუთშაბათი", "პარასკევი", "შაბათი"];
 var welcome;
 
-var calendar = new Date();
-var month = calendar.getMonth();
-var day = calendar.getDay();
+var time = new Date();
+var month = time.getMonth();
+var day = time.getDay();
 if (month<4) {
     welcome="ცივა";
 }
 else if (month>4 && month<9) {
     welcome = "ცხავს";
 }
-else if (month>=10) {
+else {
     welcome = "ცივა";
 }
-document.write(welcome + month + day);
+document.write(welcome);
+
+if(month<=4 && day==6){
+    welcome="წავედით სათხილამუროდ";
+}
+else if(month<=4 && day>0) {
+    welcome= "ვერ მივდივართ";
+}
+else if(month<=9 && day==6){
+    welcome="ვერ მივდივართ";
+}
+else if(month<=9 && day>0){
+    welcome="წავედით სათხილამუროდ";
+}
+document.write(welcome);
