@@ -18,11 +18,11 @@ document.write(fruit1);
 
 var month = ["იანვარი", "თებერვალი", "მარტი", "აპრილი", "მაისი", "ივნისი", "ივლისი", "აგვისტო", "სექტემბერი", "ოქტომბერი", "ნოემბერი", "დეკემბერი"];
 var day= ["კვირა", "ორშაბათი", "სამშაბათი", "ოთხშაბათი", "ხუთშაბათი", "პარასკევი", "შაბათი"];
+var welcome;
 
-
-var date = new date();
-var month = my.getMoth();
-var day = my.getDay();
+var calendar = new Date();
+var month = calendar.getMonth();
+var day = calendar.getDay();
 if (month<4) {
     welcome="ცივა";
 }
@@ -32,3 +32,4 @@ else if (month>4 && month<9) {
 else if (month>=10) {
     welcome = "ცივა";
 }
+document.write(welcome + month + day);
